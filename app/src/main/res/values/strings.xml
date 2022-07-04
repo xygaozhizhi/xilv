@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">xi_lv_app</string>
+    <string name="choose_device">选择设备</string>
+    <string name="connect">连接</string>
+    <string name="add_device">添加设备</string>
+
+
+</resources>

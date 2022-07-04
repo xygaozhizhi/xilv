@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp">
+
+            <ImageView
+                android:id="@+id/iv_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:onClick="onMainClick"
+                android:padding="16dp"
+                android:src="@mipmap/refresh"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:text="@string/choose_device"
+            android:textColor="@color/color_293439"
+            android:textSize="42sp" />
+
+        <com.contrarywind.view.WheelView
+            android:id="@+id/wheel_devices"
+            android:layout_width="wrap_content"
+            android:layout_height="110dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="128dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_connect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="110dp"
+            android:backgroundTint="@color/black"
+            android:letterSpacing="1.2"
+            android:onClick="onMainClick"
+            android:paddingLeft="20dp"
+            android:paddingTop="8dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="8dp"
+            android:text="@string/connect"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/black"
+            android:onClick="onMainClick"
+            android:paddingLeft="20dp"
+            android:paddingTop="8dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="8dp"
+            android:text="@string/add_device"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+    </LinearLayout>
+</layout>

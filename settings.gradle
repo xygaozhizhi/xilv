@@ -1,0 +1,23 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven{url 'https://maven.aliyun.com/repository/google'}
+        maven{url 'https://maven.aliyun.com/repository/jcenter'}
+        maven{url 'https://maven.aliyun.com/nexus/content/groups/public'}
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven{url 'https://maven.aliyun.com/repository/google'}
+        maven{url 'https://maven.aliyun.com/repository/jcenter'}
+        maven{url 'https://maven.aliyun.com/nexus/content/groups/public'}
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "xi_lv_app"
+include ':app'
+include ':wheelview'
