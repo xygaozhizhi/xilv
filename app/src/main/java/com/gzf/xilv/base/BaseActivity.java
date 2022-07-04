@@ -34,7 +34,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected void initStatusBar() {
         ImmersionBar.with(this)
-                .statusBarDarkFont(false)
+                .statusBarDarkFont(true)
                 .keyboardEnable(true)
                 .fitsSystemWindows(true)
                 .init();

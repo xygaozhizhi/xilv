@@ -42,4 +42,7 @@ dependencies {
     //状态栏沉浸
     // https://github.com/gyf-dev/ImmersionBar
     implementation 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+    //万能Adapter
+    //https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
 }
