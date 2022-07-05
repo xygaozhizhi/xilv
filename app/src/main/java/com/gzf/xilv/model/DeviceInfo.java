@@ -1,6 +1,8 @@
 package com.gzf.xilv.model;
 
-public class DeviceInfo {
+import com.contrarywind.interfaces.IPickerViewData;
+
+public class DeviceInfo implements IPickerViewData {
     private String name;
 
     public DeviceInfo(String name) {
@@ -13,5 +15,10 @@ public class DeviceInfo {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String getPickerViewText() {
+        return name;
     }
 }

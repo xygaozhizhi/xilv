@@ -1,13 +1,14 @@
 package com.gzf.xilv.adapter;
 
 import com.contrarywind.adapter.WheelAdapter;
+import com.gzf.xilv.model.DeviceInfo;
 
 import java.util.List;
 
-public class SelectDeviceAdapter implements WheelAdapter<String> {
-    private final List<String> items;
+public class SelectDeviceAdapter implements WheelAdapter<DeviceInfo> {
+    private final List<DeviceInfo> items;
 
-    public SelectDeviceAdapter(List<String> items) {
+    public SelectDeviceAdapter(List<DeviceInfo> items) {
         this.items = items;
     }
 
@@ -17,7 +18,7 @@ public class SelectDeviceAdapter implements WheelAdapter<String> {
     }
 
     @Override
-    public String getItem(int index) {
+    public DeviceInfo getItem(int index) {
         if (index >= 0 && index < items.size()) {
             return items.get(index);
         }
@@ -25,11 +26,11 @@ public class SelectDeviceAdapter implements WheelAdapter<String> {
     }
 
     @Override
-    public int indexOf(String o) {
+    public int indexOf(DeviceInfo o) {
         return 0;
     }
 
-    public List<String> getItems() {
+    public List<DeviceInfo> getItems() {
         return items;
     }
 }
