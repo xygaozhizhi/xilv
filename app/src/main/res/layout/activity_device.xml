@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.device.DeviceActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/tv_povi"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="6dp"
+                android:text="@string/po_yu"
+                android:textColor="@color/color_293439"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_alignBottom="@id/tv_povi"
+                android:layout_toEndOf="@id/tv_povi"
+                android:src="@mipmap/povi"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_povi"
+                android:layout_alignStart="@id/tv_povi"
+                android:layout_marginTop="6dp"
+                android:src="@mipmap/povi_technology"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="58dp"
+            android:layout_weight="1"
+            app:banner_auto_loop="false" />
+
+        <TextView
+            android:id="@+id/tv_add_led"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="52dp"
+            android:layout_marginBottom="58dp"
+            android:background="@color/black"
+            android:drawablePadding="6dp"
+            android:padding="12dp"
+            android:text="@string/add_led"
+            android:onClick="onDeviceClick"
+            android:textColor="@color/white"
+            app:drawableLeftCompat="@mipmap/ic_led" />
+    </LinearLayout>
+</layout>

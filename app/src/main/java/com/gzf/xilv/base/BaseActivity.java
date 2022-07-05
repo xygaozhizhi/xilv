@@ -1,6 +1,7 @@
 package com.gzf.xilv.base;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -31,12 +32,16 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected abstract void initData();
 
-
     protected void initStatusBar() {
         ImmersionBar.with(this)
                 .statusBarDarkFont(true)
                 .keyboardEnable(true)
                 .fitsSystemWindows(true)
                 .init();
+    }
+
+    public void navigation(Class<? extends AppCompatActivity> clz) {
+        Intent intent = new Intent(this, clz);
+        startActivity(intent);
     }
 }

@@ -45,4 +45,7 @@ dependencies {
     //万能Adapter
     //https://github.com/CymChad/BaseRecyclerViewAdapterHelper
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+    //banner图
+    //https://github.com/youth5201314/banner
+    implementation 'io.github.youth5201314:banner:2.2.2'
 }

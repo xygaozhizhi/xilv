@@ -19,7 +19,7 @@
                 android:layout_centerVertical="true"
                 android:onClick="onMainClick"
                 android:padding="16dp"
-                android:src="@mipmap/refresh"
+                android:src="@mipmap/ic_refresh"
                 tools:ignore="ContentDescription" />
         </RelativeLayout>
 

@@ -5,11 +5,13 @@
       <map>
         <entry key="..\:/project/AndroidProject/xi_lv_app/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
         <entry key="..\:/project/AndroidProject/xi_lv_app/app/src/main/res/layout/item_device.xml" value="0.22826086956521738" />
+        <entry key="..\:/project/xilv/app/src/main/res/layout/activity_device.xml" value="0.24114583333333334" />
         <entry key="..\:/project/xilv/app/src/main/res/layout/activity_main.xml" value="0.24114583333333334" />
+        <entry key="..\:/project/xilv/app/src/main/res/layout/item_banner.xml" value="0.24114583333333334" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

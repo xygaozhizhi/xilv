@@ -3,6 +3,14 @@
     <string name="choose_device">选择设备</string>
     <string name="connect">连接</string>
     <string name="add_device">添加设备</string>
+    <string name="po_yu">珀誉</string>
+    <string name="add_led">添加LED</string>
+    <string name="irradiation_time">照射时间</string>
+    <string name="wavelength_peak">波长峰值</string>
+    <string name="purity">纯度</string>
+    <string name="sp_ratio">SP比率</string>
+    <string name="gai">GAI</string>
+    <string name="ppft">PPFT</string>
 
 
 </resources>

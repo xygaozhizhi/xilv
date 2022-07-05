@@ -8,6 +8,7 @@ import com.gzf.xilv.adapter.SelectDeviceAdapter;
 import com.gzf.xilv.base.mvp.BaseMvpActivity;
 import com.gzf.xilv.databinding.ActivityMainBinding;
 import com.gzf.xilv.model.DeviceInfo;
+import com.gzf.xilv.ui.device.DeviceActivity;
 import com.gzf.xilv.utils.ToastUtil;
 
 public class MainActivity extends BaseMvpActivity<MainPresenter> implements MainContract.View {
@@ -52,7 +53,7 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
         if (view == binding.ivRefresh) {
             //TODO 刷新点击处理
         } else if (view == binding.btnConnect) {
-            //TODO 连接点击处理
+            navigation(DeviceActivity.class);
         } else if (view == binding.btnAddDevice) {
             //TODO 添加设备点击处理
         }
