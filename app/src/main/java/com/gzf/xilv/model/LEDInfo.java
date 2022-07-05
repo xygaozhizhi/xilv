@@ -1,6 +1,10 @@
 package com.gzf.xilv.model;
 
 public class LEDInfo {
+    public static final int TYPE_LED = 0;
+    public static final int TYPE_ADD_NEW = 1;
+
+    private int type;
     private int imageRes;
     private String name;
     private String englishName;
@@ -10,6 +14,10 @@ public class LEDInfo {
     private String spRatio;
     private String gai;
     private String ppft;
+
+    public LEDInfo(int type) {
+        this.type = type;
+    }
 
     public LEDInfo(int imageRes, String name, String englishName, String irradiationTime, String wavelengthPeak, String purity, String spRatio, String gai, String ppft) {
         this.imageRes = imageRes;
@@ -21,6 +29,14 @@ public class LEDInfo {
         this.spRatio = spRatio;
         this.gai = gai;
         this.ppft = ppft;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 
     public int getImageRes() {
