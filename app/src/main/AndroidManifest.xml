@@ -13,6 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Xi_lv_app"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.personal.PersonalActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="android.notch_support"
             android:value="true" />

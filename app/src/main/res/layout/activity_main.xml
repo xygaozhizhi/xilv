@@ -12,6 +12,16 @@
             android:layout_height="52dp">
 
             <ImageView
+                android:id="@+id/iv_personal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:onClick="onMainClick"
+                android:padding="16dp"
+                android:src="@mipmap/ic_personal"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
                 android:id="@+id/iv_refresh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
