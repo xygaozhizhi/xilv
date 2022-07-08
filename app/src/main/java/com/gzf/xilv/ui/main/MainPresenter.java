@@ -10,12 +10,7 @@ public class MainPresenter extends BasePresenter<MainContract.View> implements M
 
     public List<DeviceInfo> getDevicesInfo() {
         List<DeviceInfo> deviceInfoList = new ArrayList<>();
-        deviceInfoList.add(new DeviceInfo("item0"));
-        deviceInfoList.add(new DeviceInfo("item1"));
-        deviceInfoList.add(new DeviceInfo("item2"));
-        deviceInfoList.add(new DeviceInfo("item3"));
-        deviceInfoList.add(new DeviceInfo("item4"));
-        deviceInfoList.add(new DeviceInfo("item5"));
+        deviceInfoList.add(new DeviceInfo("    "));
         return deviceInfoList;
     }
 }

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.gzf.xilv">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Xi_lv_app"
+
+        android:networkSecurityConfig="@xml/http"
+
         tools:targetApi="31">
         <activity
             android:name=".ui.personal.PersonalActivity"
@@ -36,6 +40,11 @@
         <activity
             android:name=".ui.device.DeviceActivity"
             android:exported="false" />
+        <activity android:name="ob.bright.gz.oblibrary.OBApModeVC" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name="ob.bright.gz.oblibrary.OBSettingApInfo" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name="ob.bright.gz.oblibrary.OBWifiListVC" android:theme="@style/AppTheme.NoActionBar"></activity>
+
+
     </application>
 
 </manifest>

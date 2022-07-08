@@ -79,5 +79,19 @@
             android:paddingBottom="8dp"
             android:text="@string/add_device"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_detete_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/black"
+            android:onClick="onMainClick"
+            android:paddingLeft="20dp"
+            android:paddingTop="8dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="8dp"
+            android:text="删除设备"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
     </LinearLayout>
 </layout>
