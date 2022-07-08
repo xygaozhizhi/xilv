@@ -131,28 +131,7 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
         }else if (view == binding.btnDeteteDevice){
             Log.e("TAG", "onMainClick: "+OBOX_Device );
 
-            try {
-                JSONObject jsonObject = new JSONObject(OBOX_Device);
-                new AlertDialog.Builder(MainActivity.this).setTitle("信息提示")//设置对话框标题
-
-                        .setMessage("是否删除"+jsonObject.getString("oboxName"))
-                        .setPositiveButton("是", new DialogInterface.OnClickListener() {//添加确定按钮
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件，点击事件没写，自己添加
-                                OBOX_delete_Device(OBOX_Device);
-                            }
-                        }).setNegativeButton("否", new DialogInterface.OnClickListener() {//添加返回按钮
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {//响应事件，点击事件没写，自己添加
-
-                            }
-
-                        }).show();//在按键响应事件中显示此对话框
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
+            OBOX_delete_Device(OBOX_Device);
 
 
         }
@@ -195,7 +174,7 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
                     .setOnException((IOException e) -> {
                         Log.e("baidu", "onCreate:" + e.toString());
                         //网络错误
-
+                        Toast.makeText(MainActivity.this, "没有网络，请稍后重试", Toast.LENGTH_SHORT).show();
 
                     })
                     .get();
@@ -261,7 +240,7 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
                 .setOnException((IOException e) -> {
                     Log.e("baidu", "onCreate:" + e.toString());
                     //网络错误
-
+                    Toast.makeText(MainActivity.this, "没有网络，请稍后重试", Toast.LENGTH_SHORT).show();
                 })
                 .get();
     }
@@ -321,6 +300,7 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
                 }).setOnException((IOException e)->{
                     Log.e("baidu", "onCreate:"+e.toString());
                     //网络错误
+                    Toast.makeText(MainActivity.this, "没有网络，请稍后重试", Toast.LENGTH_SHORT).show();
                 })
                 .get();
 
@@ -365,6 +345,7 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
                                 .setOnException((IOException e)->{
                                     Log.e("baidu", "onCreate:"+e.toString());
                                     //网络错误
+                                    Toast.makeText(MainActivity.this, "没有网络，请稍后重试", Toast.LENGTH_SHORT).show();
                                 })
                                 .post();
                     }
@@ -384,25 +365,48 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
     });
     private void OBOX_delete_Device(String str)
     {
+
         try {
-            SharedPreferences sp1 = getSharedPreferences("login", MODE_PRIVATE);
-            JSONObject jsonObject =new JSONObject(str);
-            String str_ID=jsonObject.getString("oboxSerialId");
-            Log.e("TAG", "OBOX_delete_Device: "+str_ID );
-            HttpUtils.async(config.url_api1+"/api")
-                    .bodyType(OkHttps.JSON)
-                    .addUrlPara("oboxSerialId",str_ID)
-                    .addHeader("Authorization",sp1.getString("token", null) )
-                    .setOnResponse((HttpResult result1)->{
-                        Log.e("r", "OBOX_delete_Device: "+result1.getBody().toString() );
-                        getOboxList();
-                    }).setOnException((IOException e)->{
+            JSONObject jsonObject = new JSONObject(str);
+            new AlertDialog.Builder(MainActivity.this).setTitle("信息提示")//设置对话框标题
 
-                    }).delete();
+                    .setMessage("是否删除"+jsonObject.getString("oboxName"))
+                    .setPositiveButton("是", new DialogInterface.OnClickListener() {//添加确定按钮
 
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {//确定按钮的响应事件，点击事件没写，自己添加
+                            try {
+                                SharedPreferences sp1 = getSharedPreferences("login", MODE_PRIVATE);
+                                JSONObject jsonObject =new JSONObject(str);
+                                String str_ID=jsonObject.getString("oboxSerialId");
+                                Log.e("TAG", "OBOX_delete_Device: "+str_ID );
+                                HttpUtils.async(config.url_api1+"/api")
+                                        .bodyType(OkHttps.JSON)
+                                        .addUrlPara("oboxSerialId",str_ID)
+                                        .addHeader("Authorization",sp1.getString("token", null) )
+                                        .setOnResponse((HttpResult result1)->{
+                                            Log.e("r", "OBOX_delete_Device: "+result1.getBody().toString() );
+                                            getOboxList();
+                                        }).setOnException((IOException e)->{
+
+                                        }).delete();
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }).setNegativeButton("否", new DialogInterface.OnClickListener() {//添加返回按钮
+
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {//响应事件，点击事件没写，自己添加
+
+                        }
+
+                    }).show();//在按键响应事件中显示此对话框
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
 
 
     }
