@@ -21,4 +21,5 @@ public class DevicePresenter extends BasePresenter<DeviceContract.View> implemen
         ledInfos.add(addNew);
         return ledInfos;
     }
+
 }
